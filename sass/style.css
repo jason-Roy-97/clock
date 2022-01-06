@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #002147;
+}
+
+#clockie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 350px;
+  height: 350px;
+  background: #002147;
+  border: 4px solid #002147;
+  -webkit-box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 15px 15px rgba(0, 0, 0, 0.3), inset 0 15px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 15px 15px rgba(0, 0, 0, 0.3), inset 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+#clockie:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #003366;
+  -webkit-box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.411);
+          box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.411);
+  border-radius: 50%;
+  z-index: 10000;
+}
+
+#clockie #hour,
+#clockie #min,
+#clockie #sec {
+  position: absolute;
+}
+
+#clockie #hour,
+#clockie .hr {
+  width: 160px;
+  height: 160px;
+}
+
+#clockie #min,
+#clockie .mn {
+  width: 160px;
+  height: 160px;
+}
+
+#clockie #sec,
+#clockie .sc {
+  width: 230px;
+  height: 230px;
+}
+
+#clockie .hr,
+#clockie .mn,
+#clockie .sc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+}
+
+#clockie .hr:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background: #007FFF;
+  -webkit-box-shadow: 0.5px 1px 1px 0.3px rgba(1, 1, 41, 0.575);
+          box-shadow: 0.5px 1px 1px 0.3px rgba(1, 1, 41, 0.575);
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+
+#clockie .mn:before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background: #0054B4;
+  -webkit-box-shadow: 0.5px 1px 1px 0.3px rgba(1, 1, 41, 0.575);
+          box-shadow: 0.5px 1px 1px 0.3px rgba(1, 1, 41, 0.575);
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+
+#clockie .sc:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: #000080;
+  -webkit-box-shadow: 0.5px 1px 1px 0.3px rgba(1, 1, 41, 0.575);
+          box-shadow: 0.5px 1px 1px 0.3px rgba(1, 1, 41, 0.575);
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+}
+
+#clockie-border {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  height: 300px;
+  background: url(assets/clock.png) #003366;
+  background-size: cover;
+  border: 4px solid #002147;
+  -webkit-box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 15px 15px rgba(0, 0, 0, 0.3), inset 0 15px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 15px 15px rgba(0, 0, 0, 0.3), inset 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+/*# sourceMappingURL=style.css.map */

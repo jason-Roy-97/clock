@@ -1,0 +1,118 @@
+---
+---
+
+//Import Files
+@import "blue";
+@import "config";
+@import "shadesofblack";
+
+body {
+    @include center;
+    min-height: 100vh;
+    background-color: $blue24;
+}
+
+//what a pain .....to crack this nesting Process I Waste @2days 
+//sob Sob SOb😂😥🤣😂😥
+
+
+#clockie {
+    @include center;
+    width: 350px;
+    height: 350px;
+    background: $blue24;
+    border: 4px solid $blue24;
+    box-shadow: $shadow;
+    border-radius: 50%;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: $blue22;
+        box-shadow: $cap;
+        border-radius: 50%;
+        z-index: 10000;
+    }
+
+    & #hour,
+    & #min,
+    & #sec {
+        position: absolute;
+    }
+
+    & #hour,
+    .hr {
+        width: 160px;
+        height: 160px;
+    }
+
+    & #min,
+    .mn {
+        width: 160px;
+        height: 160px;
+    }
+
+    & #sec,
+    .sc {
+        width: 230px;
+        height: 230px;
+    }
+
+    .hr,
+    .mn,
+    .sc {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .hr:before {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 80px;
+        background: $blue10;
+        box-shadow: $hand-shadow;
+        z-index: 10;
+        border-radius: 6px 6px 0 0;
+        //remeber to Add The Drop Shadow
+    }
+
+//minute hand
+    .mn:before{
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 90px;
+        background: $blue16;
+        box-shadow: $hand-shadow;
+        z-index: 11;
+        border-radius: 6px 6px 0 0;
+    }
+
+//second hand    
+    .sc:before{
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 150px;
+        background: $blue21;
+        box-shadow: $hand-shadow;
+        z-index: 12;
+        border-radius: 6px 6px 0 0;
+    }
+}
+
+//border
+#clockie-border{
+    @include center;
+    width: 300px;
+    height: 300px;
+    background: url('../assets/clock.png') $blue22;
+    background-size: cover;
+    border: 4px solid $blue24;
+    box-shadow: $shadow;
+    border-radius: 50%;
+}
